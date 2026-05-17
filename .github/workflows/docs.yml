@@ -25,8 +25,8 @@ jobs:
         with:
           python-version: 3.x
 
-      - run: pip install mkdocs            # 4º: instalar dependências
-      - run: mkdocs build --clean          # 5º: build (ajuste para seu tool)
+      - run: pip install zensical            # 4º: instalar dependências
+      - run: zensical build --clean          # 5º: build (ajuste para seu tool)
 
       - uses: actions/upload-pages-artifact@v3  # 6º: upload
         with:
