@@ -4,10 +4,12 @@ on:
     branches:
       - master
       - main
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 jobs:
   deploy:
     environment:
@@ -15,15 +17,20 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/configure-pages@v6
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@v4          # 1º: checkout
+
+      - uses: actions/configure-pages@v5   # 2º: configure pages
+
+      - uses: actions/setup-python@v5      # 3º: setup python
         with:
           python-version: 3.x
-      - run: pip install zensical
-      - run: zensical build --clean
-      - uses: actions/upload-pages-artifact@v5
+
+      - run: pip install mkdocs            # 4º: instalar dependências
+      - run: mkdocs build --clean          # 5º: build (ajuste para seu tool)
+
+      - uses: actions/upload-pages-artifact@v3  # 6º: upload
         with:
           path: site
-      - uses: actions/deploy-pages@v5
+
+      - uses: actions/deploy-pages@v4      # 7º: deploy
         id: deployment
