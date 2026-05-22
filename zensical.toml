@@ -47,6 +47,7 @@ Copyright &copy; 2026 The authors
 nav = [
   { "Início" = "index.md" },
   { "Go - Introdução" = "introducao-instalacao-go.md" },
+  { "Arrays, Slices e Maps" = "arrays-slices-maps.md" },
   { "Como Funciona" = "como-funciona.md" },
   { "Markdown" = "markdown.md" },
 ]
