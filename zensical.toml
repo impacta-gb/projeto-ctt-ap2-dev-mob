@@ -46,6 +46,7 @@ Copyright &copy; 2026 The authors
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
   { "Início" = "index.md" },
+  { "Go - Introdução" = "introducao-instalacao-go.md" },
   { "Como Funciona" = "como-funciona.md" },
   { "Markdown" = "markdown.md" },
 ]
