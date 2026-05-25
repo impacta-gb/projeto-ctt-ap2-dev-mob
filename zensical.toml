@@ -48,6 +48,7 @@ nav = [
   { "Início" = "index.md" },
   { "Go - Introdução" = "introducao-instalacao-go.md" },
   { "Go - Sintaxe Básica" = "sintaxe-basica-go.md" },
+  { "Go - Estruturas de Controle" = "estruturas-controle-go.md" },
   { "Como Funciona" = "como-funciona.md" },
   { "Markdown" = "markdown.md" },
 ]
