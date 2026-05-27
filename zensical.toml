@@ -50,6 +50,7 @@ nav = [
   { "Arrays, Slices e Maps" = "arrays-slices-maps.md" },
   { "Go - Sintaxe Básica" = "sintaxe-basica-go.md" },
   { "Go - Estruturas de Controle" = "estruturas-controle-go.md" },
+  { "Structs e Métodos" = "structs-metodos-go.md" },
   { "Como Funciona" = "como-funciona.md" },
 ]
 
