@@ -1,0 +1,77 @@
+name: CI/CD Pipeline - Zensical Docs
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    # Gatilho de agendamento cron: roda todo domingo à meia-noite
+    - cron: '0 0 * * 0'
+
+jobs:
+  build_site:
+    runs-on: ubuntu-latest
+    strategy:
+      # Estratégia de Matriz: testa a geração do site em duas versões do Python
+      matrix:
+        python-version: ["3.10", "3.11"]
+
+    steps:
+    - name: Checkout do codigo
+      uses: actions/checkout@v4
+
+    - name: Configurar o Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    # Otimização com Cache para acelerar a instalação das bibliotecas
+    - name: Cache das dependencias do Pip
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Instalar o Zensical
+      run: |
+        python -m pip install --upgrade pip
+        pip install zensical
+
+    - name: Construir o site (Build)
+      run: zensical build
+
+    # Desacoplamento: salva os arquivos HTML gerados (apenas da versão 3.11 da matriz)
+    - name: Upload do Artefato do Site
+      if: matrix.python-version == '3.11'
+      uses: actions/upload-artifact@v4
+      with:
+        name: site-html
+        path: site/
+
+  deploy_site:
+    runs-on: ubuntu-latest
+    # Dependência de Jobs: este job aguarda a conclusão do build_site
+    needs: build_site 
+    # Condicional de Segurança: nunca executa se o evento for um Pull Request
+    if: github.event_name != 'pull_request'
+    
+    steps:
+    - name: Checkout do codigo
+      uses: actions/checkout@v4
+
+    # Transferência de Artefatos: baixa os arquivos gerados no job anterior
+    - name: Download do Artefato do Site
+      uses: actions/download-artifact@v4
+      with:
+        name: site-html
+        path: site
+
+    # Publica os arquivos na branch de páginas do GitHub (gh-pages)
+    - name: Deploy para o GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site
