@@ -51,6 +51,7 @@ nav = [
   { "Go - Sintaxe Básica" = "sintaxe-basica-go.md" },
   { "Go - Estruturas de Controle" = "estruturas-controle-go.md" },
   { "Structs e Métodos" = "structs-metodos-go.md" },
+  { "Tratamento de Erros" = "tratamento-de-erros.md" },
   { "Como Funciona" = "como-funciona.md" },
 ]
 
