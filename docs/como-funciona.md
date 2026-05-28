@@ -127,7 +127,7 @@ O Zensical suporta:
 - **Links e imagens**
 - **E muito mais!**
 
-Veja o arquivo [markdown.md](markdown.md) para exemplos detalhados.
+Consulte a [documentação oficial do Markdown](https://www.markdownguide.org/) para mais exemplos e recursos avançados.
 
 ## YAML Front Matter
 

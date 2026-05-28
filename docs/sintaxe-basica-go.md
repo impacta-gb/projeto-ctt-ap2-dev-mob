@@ -6,12 +6,12 @@ icon: lucide/code
 
 ## Navegação rápida
 - [Estrutura de um programa Go](#estrutura-de-um-programa-go)
-- [Declaração de variáveis](#declaração-de-variáveis)
-- [Tipos de variáveis](#tipos-de-variáveis)
-- [Inicialização e valores zero](#inicialização-e-valores-zero)
-- [Declaração curta](#declaração-curta)
+- [Declaracao de variaveis](#declaracao-de-variaveis)
+- [Tipos de variaveis](#tipos-de-variaveis)
+- [Inicializacao e valores zero](#inicializacao-e-valores-zero)
+- [Declaracao curta](#declaracao-curta)
 - [Constantes](#constantes)
-- [Boas práticas](#boas-práticas)
+- [Boas praticas](#boas-praticas)
 
 ## Estrutura de um programa Go
 
@@ -30,7 +30,7 @@ func main() {
 ??? note "Pacote e função principal"
     Um programa Go executável exige `package main` e `func main()`. Sem isso, o código não compila como aplicação.
 
-## Declaração de variáveis
+## Declaracao de variaveis
 
 Em Go, as variáveis podem ser declaradas com a palavra-chave `var` ou usando a declaração curta `:=` dentro de funções.
 
@@ -61,7 +61,7 @@ var (
 )
 ```
 
-## Tipos de variáveis
+## Tipos de variaveis
 
 | Tipo     | Descrição                        | Exemplo                 |
 |----------|----------------------------------|-------------------------|
@@ -75,7 +75,7 @@ var (
 ??? warning "Tipo padrão do float"
     Em `var x = 3.14`, o tipo inferido será `float64`, não `float32`.
 
-## Inicialização e valores zero
+## Inicializacao e valores zero
 
 Variáveis declaradas sem inicializador recebem o valor zero do tipo.
 
@@ -96,7 +96,7 @@ fmt.Println(ligado)   // false
 - `false` para `bool`
 - `nil` para ponteiros, slices, maps, canais, funções e interfaces
 
-## Declaração curta
+## Declaracao curta
 
 A declaração curta é a forma mais comum de criar variáveis dentro de funções.
 
@@ -134,7 +134,7 @@ const saudacao string = "Bem-vindo ao Go"
 ??? note "Constantes"
     Constantes em Go devem ser definidas com um valor determinável em tempo de compilação.
 
-## Boas práticas
+## Boas praticas
 
 - Prefira nomes claros e curtos para variáveis locais.
 - Use `var` quando precisar declarar a variável antes de atribuir ou quando quiser documentar o tipo.

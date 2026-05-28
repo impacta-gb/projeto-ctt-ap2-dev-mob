@@ -9,7 +9,7 @@ icon: lucide/git-branch
 - [Switch](#switch)
 - [Loops For](#loops-for)
 - [Break e Continue](#break-e-continue)
-- [Boas práticas](#boas-práticas)
+- [Boas praticas](#boas-praticas)
 - [Teste no Go Playground](#teste-no-go-playground)
 
 ## Condicional If/Else

@@ -4,26 +4,26 @@
 ## Índice de Navegação
 
 - [Arrays](#arrays)
-  - [Declaração e Inicialização](#declaração-e-inicialização)
-  - [Operações com Arrays](#operações-com-arrays)
-  - [Limitações](#limitações)
+  - [Declaracao e Inicializacao](#declaracao-e-inicializacao)
+  - [Operacoes com Arrays](#operacoes-com-arrays)
+  - [Limitacoes](#limitacoes)
 - [Slices](#slices)
-  - [O que é um Slice?](#o-que-é-um-slice)
+  - [O que é um Slice?](#o-que-e-um-slice)
   - [Criando Slices](#criando-slices)
-  - [Operações com Slices](#operações-com-slices)
+  - [Operacoes com Slices](#operacoes-com-slices)
   - [Slice Internals](#slice-internals)
 - [Maps](#maps)
-  - [Declaração e Inicialização](#declaração-e-inicialização-1)
-  - [Operações com Maps](#operações-com-maps)
-  - [Iteração em Maps](#iteração-em-maps)
-- [Comparação](#comparação)
-- [Boas Práticas](#boas-práticas)
+  - [Como Usar Maps](#como-usar-maps)
+  - [Operacoes com Maps](#operacoes-com-maps)
+  - [Iteracao em Maps](#iteracao-em-maps)
+- [Comparacao](#comparacao)
+- [Boas Praticas](#boas-praticas)
 
 ---
 
 ## Arrays
 
-### Declaração e Inicialização
+### Declaracao e Inicializacao
 
 Arrays em Go são coleções de elementos do mesmo tipo com **tamanho fixo**. Uma vez declarado, o tamanho não pode ser alterado.
 
@@ -43,7 +43,7 @@ dias := [...]string{"segunda", "terça", "quarta", "quinta", "sexta"}
 
 > **ℹ️ Informação:** Arrays com tamanho diferente são considerados tipos diferentes em Go. Um `[3]int` é diferente de um `[4]int`.
 
-### Operações com Arrays
+### Operacoes com Arrays
 
 ```go
 package main
@@ -76,7 +76,7 @@ func main() {
 }
 ```
 
-### Limitações
+### Limitacoes
 
 ⚠️ **Aviso:** Arrays em Go têm tamanho fixo e não podem ser redimensionados. Se você precisa de uma coleção dinâmica, use **Slices**.
 
@@ -91,7 +91,7 @@ func main() {
 
 ## Slices
 
-### O que é um Slice?
+### O que e um Slice?
 
 Slices são coleções **dinâmicas** que encapsulam arrays. Eles são mais flexíveis que arrays e são a forma preferida de trabalhar com coleções em Go.
 
@@ -137,7 +137,7 @@ func main() {
 }
 ```
 
-### Operações com Slices
+### Operacoes com Slices
 
 ```go
 package main
@@ -216,7 +216,7 @@ func main() {
 
 ## Maps
 
-### Declaração e Inicialização
+### Como Usar Maps
 
 Maps são coleções de pares chave-valor. São tabelas hash não ordenadas e dinâmicas.
 
@@ -252,7 +252,7 @@ func main() {
 }
 ```
 
-### Operações com Maps
+### Operacoes com Maps
 
 ```go
 package main
@@ -283,7 +283,7 @@ func main() {
 }
 ```
 
-### Iteração em Maps
+### Iteracao em Maps
 
 ```go
 package main
@@ -327,7 +327,7 @@ func main() {
 
 ---
 
-## Comparação
+## Comparacao
 
 Aqui está uma comparação prática entre Arrays, Slices e Maps:
 
@@ -371,9 +371,9 @@ func main() {
 
 ---
 
-## Boas Práticas
+## Boas Praticas
 
-### ✅ Recomendações
+### ✅ Recomendacoes
 
 1. **Use Slices por padrão** - Arrays são raramente necessários em Go. Prefira slices para coleções dinâmicas.
 
@@ -478,7 +478,7 @@ fmt.Println(vazio2 == nil)  // false
 fmt.Println(vazio3 == nil)  // false
 ```
 
-3. **Usar map[interface{}]interface{} sem necessidade**
+3. **Usar `map[interface{}]interface{}` sem necessidade**
 
 ```go
 // ✅ Melhor - mais específico
