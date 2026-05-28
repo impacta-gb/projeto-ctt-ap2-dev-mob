@@ -52,6 +52,7 @@ nav = [
   { "Go - Estruturas de Controle" = "estruturas-controle-go.md" },
   { "Structs e Métodos" = "structs-metodos-go.md" },
   { "Tratamento de Erros" = "tratamento-de-erros.md" },
+  { "Gerenciamento de Pacotes" = "gerenciamento-de-pacotes.md" },
   { "Como Funciona" = "como-funciona.md" },
 ]
 
