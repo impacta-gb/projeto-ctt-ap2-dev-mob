@@ -2,22 +2,22 @@
 
 ## Índice de Conteúdo
 
-1. [Introdução](#introdução)
+1. [Introdução](#introducao)
 2. [Structs](#structs)
-   - [Definição Básica](#definição-básica)
+   - [Definicao Basica](#definicao-basica)
    - [Campos de Struct](#campos-de-struct)
-   - [Inicialização](#inicialização)
+   - [Inicializacao](#inicializacao)
    - [Embedded Structs](#embedded-structs)
-3. [Métodos](#métodos)
-   - [Declaração de Métodos](#declaração-de-métodos)
+3. [Metodos](#metodos)
+   - [Declaracao de Metodos](#declaracao-de-metodos)
    - [Receptores por Valor](#receptores-por-valor)
    - [Receptores por Ponteiro](#receptores-por-ponteiro)
-4. [Exemplos Práticos](#exemplos-práticos)
-5. [Boas Práticas](#boas-práticas)
+4. [Exemplos Praticos](#exemplos-praticos)
+5. [Boas Praticas](#boas-praticas)
 
 ---
 
-## Introdução
+## Introducao
 
 Structs (estruturas) são tipos de dados compostos que permitem agrupar múltiplos campos de diferentes tipos. Métodos são funções associadas a um tipo específico, permitindo programação orientada a objetos em Go.
 
@@ -27,7 +27,7 @@ Structs (estruturas) são tipos de dados compostos que permitem agrupar múltipl
 
 ## Structs
 
-### Definição Básica
+### Definicao Basica
 
 Uma struct é definida usando a palavra-chave `type` seguida pelo nome da struct e a palavra-chave `struct`:
 
@@ -64,7 +64,7 @@ type Funcionario struct {
 }
 ```
 
-### Inicialização
+### Inicializacao
 
 Existem várias formas de criar instâncias de structs:
 
@@ -180,9 +180,9 @@ func main() {
 
 ---
 
-## Métodos
+## Metodos
 
-### Declaração de Métodos
+### Declaracao de Metodos
 
 Um método é uma função com um **receptor** especial. O receptor fica entre a palavra-chave `func` e o nome do método:
 
@@ -342,7 +342,7 @@ func main() {
 
 ---
 
-## Exemplos Práticos
+## Exemplos Praticos
 
 ### Exemplo 1: Sistema de Banco
 
@@ -461,7 +461,7 @@ func main() {
 
 ---
 
-## Boas Práticas
+## Boas Praticas
 
 ### 1. Escolha o Receptor Correto
 
