@@ -1,5 +1,9 @@
 ---
 icon: lucide/shield-check
+tags:
+  - erros
+  - go
+  - fundamentals
 ---
 
 # Tratamento de Erros em Go
