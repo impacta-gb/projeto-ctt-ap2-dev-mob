@@ -1,4 +1,4 @@
-# Go Docs — Grupo X
+# Go Docs — Dev Mob
 
 ## 👥 Integrantes
 - Nome Sobrenome (GitHub: @username)
