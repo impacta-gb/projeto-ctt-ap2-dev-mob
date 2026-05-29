@@ -1,13 +1,11 @@
 # Go Docs — Grupo X
 
 ## 👥 Integrantes
-- Nome Sobrenome (GitHub: @username)
-- Nome Sobrenome (GitHub: @username)
-- Nome Sobrenome (GitHub: @username)
-
-## 🔗 Links
-- **Repositório:** https://github.com/...
-- **Site publicado:** https://...github.io/...
+- Kauã Queiroga Oliveira André
+- Caio Eduardo de Carvalho
+- Arthur Lopes Placência
+- Augusto Meirelles
+- Felipe de Oliveira
 
 ## 🔀 Fluxo de Trabalho
 1. Cada membro cria uma branch (ex: `feat/doc-goroutines`)
