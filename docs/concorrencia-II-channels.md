@@ -8,14 +8,14 @@ Channels são a forma idiomatic em Go para comunicação entre goroutines. Eles 
 
 ## Tabela de Conteúdos
 
-- [Visão Geral](#visão-geral)
+- [Visão Geral](#visao-geral)
 - [Criando Channels](#criando-channels)
 - [Enviando e Recebendo Dados](#enviando-e-recebendo-dados)
 - [Channels Direcionados](#channels-direcionados)
 - [Select Statement](#select-statement)
 - [Buffered vs Unbuffered](#buffered-vs-unbuffered)
-- [Padrões Comuns](#padrões-comuns)
-- [Boas Práticas](#boas-práticas)
+- [Padrões Comuns](#padroes-comuns)
+- [Boas Práticas](#boas-praticas)
 
 ## Visão Geral
 
