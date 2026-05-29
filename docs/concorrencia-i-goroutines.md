@@ -1,12 +1,12 @@
 # Concorrência I: Goroutines
 
 ## Índice
-- [O que é uma Goroutine?](#o-que-é-uma-goroutine)
+- [O que é uma Goroutine?](#o-que-e-uma-goroutine)
 - [Criando Goroutines](#criando-goroutines)
-- [Sincronização Básica](#sincronização-básica)
+- [Sincronização Básica](#sincronizacao-basica)
 - [WaitGroup](#waitgroup)
-- [Boas Práticas](#boas-práticas)
-- [Exemplos Práticos](#exemplos-práticos)
+- [Boas Práticas](#boas-praticas)
+- [Exemplos Práticos](#exemplos-praticos)
 
 ## O que é uma Goroutine?
 

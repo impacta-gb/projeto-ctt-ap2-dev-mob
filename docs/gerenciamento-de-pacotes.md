@@ -8,13 +8,13 @@ Go Modules é o sistema padrão de gerenciamento de dependências em Go desde a 
 
 ## Tabela de Conteúdos
 
-- [Visão Geral](#visão-geral)
-- [Inicializando um Módulo](#inicializando-um-módulo)
-- [Adicionando Dependências](#adicionando-dependências)
-- [Gerenciando Versões](#gerenciando-versões)
+- [Visão Geral](#visao-geral)
+- [Inicializando um Módulo](#inicializando-um-modulo)
+- [Adicionando Dependências](#adicionando-dependencias)
+- [Gerenciando Versões](#gerenciando-versoes)
 - [Arquivo go.mod e go.sum](#arquivo-gomod-e-gosum)
-- [Comandos Úteis](#comandos-úteis)
-- [Boas Práticas](#boas-práticas)
+- [Comandos Úteis](#comandos-uteis)
+- [Boas Práticas](#boas-praticas)
 
 ## Visão Geral
 

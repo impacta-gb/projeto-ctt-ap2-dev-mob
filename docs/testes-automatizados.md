@@ -8,14 +8,14 @@ Testes automatizados são essenciais para garantir a qualidade do código. Go po
 
 ## Tabela de Conteúdos
 
-- [Visão Geral](#visão-geral)
-- [Configuração Básica](#configuração-básica)
-- [Escrevendo Testes Unitários](#escrevendo-testes-unitários)
+- [Visão Geral](#visao-geral)
+- [Configuração Básica](#configuracao-basica)
+- [Escrevendo Testes Unitários](#escrevendo-testes-unitarios)
 - [Tabelas de Testes](#tabelas-de-testes)
 - [Subtestes](#subtestes)
 - [Testes de Benchmark](#testes-de-benchmark)
 - [Cobertura de Testes](#cobertura-de-testes)
-- [Boas Práticas](#boas-práticas)
+- [Boas Práticas](#boas-praticas)
 
 ## Visão Geral
 

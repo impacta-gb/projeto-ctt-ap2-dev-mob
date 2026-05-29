@@ -11,12 +11,12 @@ tags:
 ## Navegação rápida
 - [Por que tratar erros](#por-que-tratar-erros)
 - [Erro como valor](#erro-como-valor)
-- [Verificação de erros](#verificação-de-erros)
-- [Criação de erros](#criação-de-erros)
+- [Verificação de erros](#verificacao-de-erros)
+- [Criação de erros](#criacao-de-erros)
 - [Encadeamento e wrapping](#encadeamento-e-wrapping)
-- [Sentinela, tipos e inspeção](#sentinela-tipos-e-inspeção)
-- [Pânico e recover](#pânico-e-recover)
-- [Boas práticas](#boas-práticas)
+- [Sentinela, tipos e inspeção](#sentinela-tipos-e-inspecao)
+- [Pânico e recover](#panico-e-recover)
+- [Boas práticas](#boas-praticas)
 
 ## Por que tratar erros
 
