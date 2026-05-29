@@ -1,0 +1,79 @@
+name: CI/CD - Go Docs
+
+on:
+  pull_request:
+    branches: [main]      # roda na abertura de PRs
+  push:
+    branches: [main]      # roda após merge na main
+  schedule:
+    - cron: '0 0 * * 0'  # toda segunda-feira às 00h UTC
+
+jobs:
+  # ─────────────────────────────────────────
+  # JOB 1: Validação com Matrix Strategy
+  # ─────────────────────────────────────────
+  build_site:
+    name: Build (${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11']
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Cache de dependências pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ matrix.python-version }}-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            pip-${{ matrix.python-version }}-
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Build do site
+        run: zensical build   # ou: mkdocs build
+
+      # Upload do artefato (só na versão 3.11)
+      - name: Upload artefato do site
+        if: matrix.python-version == '3.11'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+
+  # ─────────────────────────────────────────
+  # JOB 2: Deploy no GitHub Pages
+  # ─────────────────────────────────────────
+  deploy_site:
+    name: Deploy no GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build_site   # aguarda build_site terminar
+
+    # NUNCA roda em Pull Request — só em push ou schedule
+    if: github.event_name == 'push' || github.event_name == 'schedule'
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Download artefato do site
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+
+      - name: Deploy no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
